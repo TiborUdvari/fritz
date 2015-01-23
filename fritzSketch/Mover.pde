@@ -18,15 +18,17 @@ class Mover
 
   Mover(ArrayList<Mover> listMovers, ArrayList<PImage> images, PVector position, float rotation)
   {
-    this.position = position;
-    this.rotation = rotation;
-    this.delta = new PVector();
     this.listMovers = listMovers;
     this.images = images;
+    this.position = position;
+    this.rotation = rotation;
+    
     index = 0;
     startImage = images.get(0);
     endImage = images.get(images.size()-1);
-    this.listMovers.add(this);
+    
+    delta = new PVector();
+    
     isKiller = false;
     isDead = false;
   }
